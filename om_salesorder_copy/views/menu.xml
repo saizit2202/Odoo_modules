@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <!-- Top menu item -->
+      <menuitem name="Sales Copy"
+          id="sales_order_copy_main"
+          sequence="-100"
+         />
+
+      <!-- Top menu item -->
+      <menuitem name="Sales"
+          id="sales_order_copy_sub"
+                parent="sales_order_copy_main"
+          sequence="0"
+         />
+
+        <record model="ir.actions.act_window" id="action_salesorder_copy_window">
+                <field name="name">Sales order copy</field>
+                <field name="res_model">sales.salesorder</field>
+        </record>
+
+      <!-- Top menu item -->
+      <menuitem name="Order"
+                parent="sales_order_copy_sub"
+                id="sales_order_copy_sales"
+                action="action_salesorder_copy_window"
+          sequence="0"
+         />
+
+</odoo>

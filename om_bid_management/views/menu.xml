@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-      <!-- Top menu item -->
-      <menuitem name="Bid Management"
-          id="bid_management_main"
-          sequence="-100"
-         />
+    <!-- Top menu item -->
+    <menuitem name="Bid Management"
+              id="bid_management_main"
+              sequence="-100"
+    />
 
-      <!-- Top menu item -->
-      <menuitem name="Create Bid"
-          id="bid_management_create"
-                parent="bid_management_main"
-          sequence="0"
-         />
-
-        <record model="ir.actions.act_window" id="action_bidmgmt_createbid_win">
-                <field name="name">Create Bid</field>
-                <field name="res_model">bid.bidmgmtheader</field>
-        </record>
-
-      <!-- Top menu item -->
-      <menuitem name="Create Bid"
-                parent="bid_management_main"
-                id="bid_management_create"
-                action="action_bidmgmt_createbid_win"
-          sequence="0"
-         />
 
 </odoo>

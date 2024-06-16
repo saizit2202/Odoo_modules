@@ -12,6 +12,7 @@ Bid Management Module
     'depends': [],
     'data': [
         "views/menu.xml",
+        "views/createbid.xml"
     ],
     'license': 'LGPL-3',
 }

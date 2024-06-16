@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ir_bidmgmt_createbid_form" model="ir.ui.view">
+        <field name="name">bid.bidmgmtheader form view</field>
+        <field name="model">bid.bidmgmtheader</field>
+        <field name="arch" type="xml">
+            <form>
+            <sheet>
+                 <group >
+                    <group >
+                        <field name="name"/>
+                    </group>
+                    <group >
+                        <field name="bidno"/>
+                    </group>
+                 </group >
+            </sheet>
+            </form>
+        </field>
+        </record>
+
+    <record id="ir_bidmgmt_createbid_tree_view" model="ir.ui.view">
+        <field name="name">bid.bidmgmtheader tree view</field>
+        <field name="model">bid.bidmgmtheader</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name"/>
+                <field name="bidno"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="action_bidmgmt_createbid_win">
+        <field name="name">Create Bid</field>
+        <field name="res_model">bid.bidmgmtheader</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Create Bid"
+              parent="bid_management_main"
+              id="bid_management_create"
+              action="action_bidmgmt_createbid_win"
+              sequence="0"
+    />
+
+</odoo>
